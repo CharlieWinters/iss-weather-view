@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "name": "iss-weather-view",
+    "version": "1.22.1",
+    "scripts": {
+        "start": "nr1 nerdpack:serve",
+        "test": "exit 0"
+    },
+    "nr1": {
+        "uuid": "fbbcb79a-56f0-4800-adf9-ce5769b3f6dd"
+    },
+    "dependencies": {
+        "leaflet": "^1.6.0",
+        "prop-types": "^15.6.2",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
+        "react-leaflet": "^2.7.0"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "not ie < 11",
+        "not dead"
+    ]
+}

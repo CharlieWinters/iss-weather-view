@@ -1,0 +1,22 @@
+integrations:
+  - name: nri-flex
+    interval: 60m
+    config:
+      name: issInfo
+      lookup_file: /home/ubuntu/apikeys.json
+      apis:
+        - name: iss
+          url: https://api.wheretheiss.at/v1/satellites/25544
+          headers:
+            accept: application/json
+          store_lookups:
+            latitude: latitude
+            longitude: longitude
+          merge: issSample
+        - name: weather
+          event_type: weather
+          url: "https://weatherbit-v1-mashape.p.rapidapi.com/current?lang=en&lon=${lookup:longitude}&lat=${lookup:latitude}"
+          headers:
+            x-rapidapi-host: weatherbit-v1-mashape.p.rapidapi.com
+            x-rapidapi-key: ${lf:x-rapidapi-key}
+          merge: issSample

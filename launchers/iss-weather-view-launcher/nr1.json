@@ -1,0 +1,7 @@
+{
+    "schemaType": "LAUNCHER",
+    "id": "iss-weather-view-launcher",
+    "displayName": "IssWeatherViewLauncher",
+    "description": "Describe me",
+    "rootNerdletId": "iss-weather-view-nerdlet"
+}
